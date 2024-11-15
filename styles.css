@@ -1,0 +1,216 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+ 
+#fondo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/Img/Fondo.png);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+#ascensor {
+    position: absolute;
+    left: 530px;
+    top: 440px;
+    width: 95px;
+    height: 136px;
+    background-image: url(/Img/Ascensor.png);
+}
+
+#personajeAsce {
+    position: fixed;
+    left: 560px;
+    top: 505px;
+    background-image: url(/Img/MuñecoAscensor.png);
+    height: 60px;
+    width: 36px;
+    animation-name: quieto;
+    animation-duration: 1s;
+    animation-timing-function: steps(4);
+    animation-iteration-count: infinite;
+}
+
+#MineroAfk {
+    position: fixed;
+    left: 780px;
+    top: 780px;
+    background-image: url(/Img/MineroAfk.png);
+    width: 53px;
+    height: 56px;
+    animation-name: mineroAfk;
+    animation-duration: 0.9s;
+    animation-timing-function: steps(4);
+    animation-iteration-count: infinite;
+}
+
+/* Animaciones del minero */
+@keyframes quieto {
+    from { background-position-x: 0px; }
+    to { background-position-x: -144px; }
+}
+
+@keyframes mineroAfk {
+    from { background-position-x: 0px; }
+    to { background-position-x: -211px; }
+}
+
+@keyframes mineroCaminar {
+    from { background-position-x: 0px; }
+    to { background-position-x: -208px; }
+}
+
+@keyframes mineroPicar {
+    from { background-position-x: 0px; }
+    to { background-position-x: -199px; }
+}
+
+@keyframes mineroDevolver {
+    from { background-position-x: 0px; }
+    to { background-position-x: -200px; }
+}
+
+#Picado {
+    position: fixed;
+    left: 715px; /* Ajusta según sea necesario para posicionarlo */
+    top: 755px;  /* Alinea verticalmente con el minero */
+    font-size: 30px;
+    color: #fff; /* Cambia el color para que sea visible sobre el fondo */
+}
+
+#Almacen
+{
+    position: fixed;
+    left: 560px;
+    top: 40px;
+    font-size: 40px;
+    color: #000000; /* Cambia el color para que sea visible sobre el fondo */
+}
+
+#Total
+{
+    position: fixed;
+    left: 900px;
+    top: 20px;
+    font-size: 40px;
+    color: #000000; /* Cambia el color para que sea visible sobre el fondo */
+}
+
+/* Estilos para el botón de nivel */
+#botonNivel {
+    position: fixed;
+    right: 50px;
+    top: 730px;
+    left: 1250px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(145deg, #ff4f4f, #ff4f4f);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#botonNivel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+#botonNivel:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nivel-texto {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#nivelMina {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilos para el carrito y personaje */
+#carrito {
+    position: fixed;
+    left: 1135px;
+    top: 370px;
+    width: 75px;
+    height: 40px;
+    background-image: url(/Img/Carrito.png);
+    cursor: pointer;
+}
+
+#personajeCarrito {
+    position: fixed;
+    left: 1200px;
+    top: 350px;
+    width: 36px;
+    height: 60px;
+    background-image: url(/Img/PersonajeCarrito.png);
+    animation-name: personajeCarritoIdle;
+    animation-duration: 1s;
+    animation-timing-function: steps(4);
+    animation-iteration-count: infinite;
+}
+
+/* Animación para el personaje del carrito */
+@keyframes personajeCarritoIdle {
+    from { background-position-x: 0px; }
+    to { background-position-x: -136px; }
+}
+
+/* Estilos para las alertas */
+.swal2-popup {
+    font-size: 1.2em;
+    border-radius: 15px;
+}
+
+.swal2-title {
+    color: #ff4f4f;
+}
+
+.swal2-confirm {
+    background-color: #ff4f4f !important;
+    border-radius: 10px !important;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animated {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
